@@ -1,16 +1,18 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Hey! I'm Jithendaraa, and am currently doing my pre-final year at NIT Trichy majoring in Production Engineering with a minors in Computer Science. I enjoy learning and my most favourite topics are in Math, Computer Science and Physics (though I haven't been in touch with Physics lately!). Teaching excites me and I would like to become a professor eventually. Broadly speaking, my research interests are in:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+* Machine Learning
+* Deep Learning
+* Reinforcement Learning
+* Bayesian Learning and Inference
 
-What else do you need?
+### my academic history
 
-### my history
+NIT Trichy '21
+NPS '17
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+

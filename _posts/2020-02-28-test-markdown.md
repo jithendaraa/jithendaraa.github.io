@@ -31,6 +31,7 @@ There are many notions and definitions of privacy and even more methods/attempts
 One of the modern ways to attack is to use a Machine learning model that trains on multiple other models called **"shadow models"** which has a black-box mechanism that predicts the inputs using the known public outputs with varying levels of confidence. Once the model is trained and is able to predict user data with sufficient amounts of confidence, the data leaks and the user is exposed, hence free to be exploited by the attacker. In an era where all our information is stored in databases on the internet, this leaked data could be absolutely anything, ranging from your family's genetic disorders, to predicting your current account balance. **Insert hackerman meme**
 
 <img src="https://66.media.tumblr.com/6e5d75677d297bdfc1a4b80b1660daa3/tumblr_opdkedNera1ticdtho1_400.png" alt="hackaaa" style="float: left; margin: 10px;" />
+<br/ >
 
 * **The mediator**
 

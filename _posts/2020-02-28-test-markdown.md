@@ -58,7 +58,7 @@ Differential privacy has been an existing concept for long in Mathematics. The m
 Let's get into the math!
 Spoiler: This section is probably gonna contain more memes than math, haha :)
 
-<img src="https://cdn.kapwing.com/final_5c11554bb472020012f692ef_968276.jpg" alt="Markdown Monster icon" style="margin: 10px;" />
+<img src="https://cdn.kapwing.com/final_5c11554bb472020012f692ef_968276.jpg" alt="Markdown Monster icon" style="margin: 10px; width:200px; height:200px;" />
 
 Formally, a randomized mechanism M: X → Y is ε-Differentially private if for all neighboring inputs x' near x, and for all outputs E ∈ Y we have:
 **P[M(x) ∈ Y] ≤ exp(ε) P[M(x') ∈ Y] or**

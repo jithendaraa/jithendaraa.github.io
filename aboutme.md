@@ -10,7 +10,7 @@ Hey! I'm Jithendaraa, and am currently doing my pre-final year at NIT Trichy maj
 * Reinforcement Learning
 * Bayesian Learning and Inference
 
-### my academic history
+### Academic history
 
 * NIT Trichy '21
 * NPS '17

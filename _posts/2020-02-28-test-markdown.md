@@ -4,7 +4,6 @@ title: Privacy Aware Machine Learning
 subtitle: Extending differential privacy to machine learning algorithms
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-tags: [test]
 comments: true
 ---
 

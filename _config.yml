@@ -4,7 +4,7 @@
 title: Jithendaraa Subramanian
 
 # Short description of your site
-description: My personal website
+description:
 
 # Your name to show in the footer
 author: Jithendaraa Subramanian
@@ -13,10 +13,9 @@ author: Jithendaraa Subramanian
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Blogs:
+    - IIT Palakkad: "https://jithendaraa.github.io/iitp-intern"
+    - IIT Madras: "https://jithendaraa.github.io/iitm-intern"
 
 # --- Logo --- #
 

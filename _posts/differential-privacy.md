@@ -2,9 +2,6 @@
 layout: post
 title: Privacy Aware Machine Learning
 subtitle: Extending differential privacy to machine learning algorithms
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-comments: true
 ---
 
 <img src="https://cdn-images-1.medium.com/max/1000/0*0cN6yO_kHXZklVg1.jpg" alt="Markdown Monster icon" style="margin: 10px;" />

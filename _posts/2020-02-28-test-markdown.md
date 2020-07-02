@@ -12,8 +12,7 @@ The past decade has seen an exponential growth in Machine Learning and Artificia
 
 "Why should I care?"
 
-
-https://cdn-images-1.medium.com/max/750/0*6LDd7btZistasjgF
+<img src="https://cdn-images-1.medium.com/max/750/0*6LDd7btZistasjgF" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
 
 Few years ago, Netflix posted an "anonymous" dataset on Kaggle for a contest to get machine learning enthusiasts to work on efficient movie recommendation algorithms, only later realising that there was a privacy breach where some participants were able to actually infer individual user data. This is just one of many examples that highlights the low-privacy levels of ML models. This gives us the motivation to study it more before its too late and we get exploited.
 
@@ -21,7 +20,7 @@ Few years ago, Netflix posted an "anonymous" dataset on Kaggle for a contest to 
 
 #### Shadow Models and Membership Inference attacks
 
-https://cdn-images-1.medium.com/max/750/0*jOE0cos-c1iOXdTT.png
+<img src="https://cdn-images-1.medium.com/max/750/0*jOE0cos-c1iOXdTT.png" alt="Markdown Monster icon" style="float: left; margin-right: 10px;" />
 
 There are many notions and definitions of privacy and even more methods/attempts at trying to establish privacy, but most of them have flaws which can be exploited by an adversary through something called Membership Inference Attacks. Adversaries can attack the model to extract user data in a lot of different ways.
 

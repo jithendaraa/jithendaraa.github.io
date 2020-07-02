@@ -22,7 +22,7 @@ Few years ago, Netflix posted an "anonymous" dataset on Kaggle for a contest to 
 
 ### Popular attack and defense strategies
 
-* Shadow Models and Membership Inference attacks
+* **Shadow Models and Membership Inference attacks**
 
 <img src="https://cdn-images-1.medium.com/max/750/0*jOE0cos-c1iOXdTT.png" alt="Markdown Monster icon" style="float: left; margin: 10px;" />
 
@@ -32,18 +32,17 @@ One of the modern ways to attack is to use a Machine learning model that trains 
 
 <img src="https://66.media.tumblr.com/6e5d75677d297bdfc1a4b80b1660daa3/tumblr_opdkedNera1ticdtho1_400.png" alt="hackaaa" style="float: left; margin: 10px;" />
 
-
-* The mediator
+* **The mediator**
 
 Another way is to have a mediator who can somehow selectively give information to the adversary based on whether there will be loss of a particular individual's data or not. But the problem with this is that just by the mediator telling "I can't give you this information", the attacker can infer that there is some sensitive data and can make predictions on what that might be.
 
-* Perturbing the data with random noise
+* **Perturbing the data with random noise**
 
 <img src="https://cdn-images-1.medium.com/max/1000/0*BkyU0pQV6gZ2e0H0.png" alt="Markdown Monster icon" style="float: left; margin: 10px;" />
 
 Yet another interesting approach would be the addition of random noises from a uniform distribution to our dataset. This approach too fails, since for larger data we can simply average out the values and can get an estimate of our original dataset.
 
-* Count queries
+* **Count queries**
 
 A common and efficient way to attack is using count queries, where our attacker asks a query Q like: "What are the marks of student A?" to get a count and this leaks individual data. A direct approach everyone intuitively takes to this problem is: "Why don't you restrict the queries to only group queries? This won't leak individual data. Right?". But, this is a rather naive approach since the attacker , with a few cleverly placed group queries can infer individual user data. For example, by asking "How many students got above 90 in the class?" and "How many students other than student A got above 90 in the class?", the attacker can infer student A's marks simply by subtracting the two results. Thus restricting ourselves to group query also, fails. This is big brain time.
 
@@ -54,8 +53,6 @@ A common and efficient way to attack is using count queries, where our attacker 
 Differential privacy has been an existing concept for long in Mathematics. The main idea of this concept, is as follows:
 
 >If our model is able to predict things with or without your data to an amount not differing by an amount more than a multiplicative exp(ε), then we are said to be ε-differentially private or ε-DP
-
-
 
 Let's get into the math!
 Spoiler: This section is probably gonna contain more memes than math, haha :)

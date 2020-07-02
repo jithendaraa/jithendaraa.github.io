@@ -12,7 +12,7 @@ Hey! I'm Jithendaraa, and am currently doing my pre-final year at NIT Trichy maj
 
 ### my academic history
 
-NIT Trichy '21
-NPS '17
+* NIT Trichy '21
+* NPS '17
 
 

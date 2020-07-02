@@ -68,6 +68,7 @@ Formally, a randomized mechanism M: X → Y is ε-Differentially private if for 
 
 Note that a neighboring data set **x'** of **x** means that **x** and **x'** differ by exactly one entry - ie., the participation or non-participation of exactly one user. This is like saying 
 > "Hey, our performance didn't take a significant hit with or without your data, so you might as well participate by giving your data and joining the survey!"   
+
 It is important to note that the equation is also symmetrical in nature though this is not very obvious. ε is a privacy parameter or the privacy budget, and quantifies our **"information loss"**. Privacy budget at 0 is said to be completely private though in reality it might not be possible as this will compromise on our performance and our model will lose all meaning. Attaining **ε=0** is very ideal and analogous to attaining an efficiency of 100% in an engine - we'd love to get there but it isn't realistic or practical. Our aim is to get our ε as close to 0 as possible. On the other hand, as **ε** → ∞, we are said to be "blatantly non-private" or completely non-private.
 
 <img src="https://cdn-images-1.medium.com/max/750/0*lsQ_2UbtuDyVLiGm" alt="Markdown Monster icon" style="margin: 10px;" />

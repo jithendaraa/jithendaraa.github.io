@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An introduction to Privacy Aware Machine Learning: and why do we need it?
+title: An introduction to Privacy Aware Machine Learning
 subtitle: Extending differential privacy to machine learning algorithms
 ---
 

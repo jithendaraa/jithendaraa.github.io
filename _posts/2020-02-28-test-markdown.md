@@ -64,7 +64,7 @@ Formally, a randomized mechanism M: X → Y is ε-Differentially private if for 
 **P[M(x) ∈ Y] ≤ exp(ε) P[M(x') ∈ Y] or**     
 **P[M(x) ∈ Y] ≤ (1+ε) * P[M(x') ∈ Y] for small ε**
 
-<img src="https://cdn-images-1.medium.com/max/1000/0*h41f8kdsMrBwXiBH.gif" alt="Markdown Monster icon" style="margin: 10px; width:400px; height:400px;" />
+<img src="https://cdn-images-1.medium.com/max/1000/0*h41f8kdsMrBwXiBH.gif" alt="Markdown Monster icon" style="margin: 10px;" />
 
 Note that a neighboring data set **x'** of **x** means that **x** and **x'** differ by exactly one entry - ie., the participation or non-participation of exactly one user. This is like saying 
 > "Hey, our performance didn't take a significant hit with or without your data, so you might as well participate by giving your data and joining the survey!"   

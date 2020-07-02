@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My first internship (at IIT Palakkad)
+title: My first research internship (at IIT Palakkad)
 subtitle: Extending differenetial privacy to machine learning algorithms
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]

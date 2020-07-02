@@ -30,16 +30,16 @@ There are many notions and definitions of privacy and even more methods/attempts
 
 One of the modern ways to attack is to use a Machine learning model that trains on multiple other models called **"shadow models"** which has a black-box mechanism that predicts the inputs using the known public outputs with varying levels of confidence. Once the model is trained and is able to predict user data with sufficient amounts of confidence, the data leaks and the user is exposed, hence free to be exploited by the attacker. In an era where all our information is stored in databases on the internet, this leaked data could be absolutely anything, ranging from your family's genetic disorders, to predicting your current account balance. **Insert hackerman meme**
 
-<img src="https://66.media.tumblr.com/6e5d75677d297bdfc1a4b80b1660daa3/tumblr_opdkedNera1ticdtho1_400.png" alt="hackaaa" style="float: left; margin: 10px;" />
-<br/ >
+<img src="https://66.media.tumblr.com/6e5d75677d297bdfc1a4b80b1660daa3/tumblr_opdkedNera1ticdtho1_400.png" alt="hackaaa" style="margin: 10px;" />
+<br/>
 
 * **The mediator**
 
-Another way is to have a mediator who can somehow selectively give information to the adversary based on whether there will be loss of a particular individual's data or not. But the problem with this is that just by the mediator telling "I can't give you this information", the attacker can infer that there is some sensitive data and can make predictions on what that might be.
+Another way is to have a mediator who can somehow selectively give information to the adversary based on whether there will be loss of a particular individual's data or not. But the problem with this is that, just by the mediator telling "I can't give you this information", the attacker can infer that there is some sensitive data and can make predictions on what that might be.
 
 * **Perturbing the data with random noise**
 
-<img src="https://cdn-images-1.medium.com/max/1000/0*BkyU0pQV6gZ2e0H0.png" alt="Markdown Monster icon" style="float: left; margin: 10px;" />
+<img src="https://cdn-images-1.medium.com/max/1000/0*BkyU0pQV6gZ2e0H0.png" alt="Markdown Monster icon" style="float: left; margin: 10px;"/>
 
 Yet another interesting approach would be the addition of random noises from a uniform distribution to our dataset. This approach too fails, since for larger data we can simply average out the values and can get an estimate of our original dataset.
 

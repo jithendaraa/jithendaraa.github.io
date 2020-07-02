@@ -47,7 +47,9 @@ A common and efficient way to attack is using count queries, where our attacker 
 
 ## An Introduction to Differential Privacy
 
-Differential privacy has been an existing concept for long in Mathematics. The main idea of this concept, is as follows:
+Differential privacy has been an existing concept for long in Mathematics. On a very basic level, we can think of this as providing some sort of measure on the privacy that we have. Once we have this notion, the task becomes very clear: increase this privacy measure to the maximum extent possible. 
+
+The main idea of this concept, is as follows:
 
 >If our model is able to predict things with or without your data to an amount not differing by an amount more than a multiplicative exp(ε), then we are said to be ε-differential private or ε-DP
 
@@ -56,28 +58,34 @@ Spoiler: This section is probably gonna contain more memes than math, haha :)
 
 <img src="https://i.kym-cdn.com/entries/icons/mobile/000/021/464/14608107_1180665285312703_1558693314_n.jpg" alt="Markdown Monster icon" style="margin: 10px;" />
 
-Formally, a randomized mechanism M: X → Y is ε-Differentially private if for all neighboring inputs x' near x, and for all outputs E ∈ Y we have:
+Formally, a randomized mechanism M: X → Y is ε-Differentially private if for all neighboring inputs **x'** near **x**, and for all outputs E ∈ Y we have:
 **P[M(x) ∈ Y] ≤ exp(ε) P[M(x') ∈ Y] or**     
 **P[M(x) ∈ Y] ≤ (1+ε) * P[M(x') ∈ Y] for small ε**
-
-<img src="https://cdn-images-1.medium.com/max/1000/0*h41f8kdsMrBwXiBH.gif" alt="Markdown Monster icon" style="margin: 10px;" />
 
 Note that a neighboring data set **x'** of **x** means that **x** and **x'** differ by exactly one entry - ie., the participation or non-participation of exactly one user. This is like saying 
 > "Hey, our performance didn't take a significant hit with or without your data, so you might as well participate by giving your data and joining the survey!"   
 
-It is important to note that the equation is also symmetrical in nature though this is not very obvious. ε is a privacy parameter or the privacy budget, and quantifies our **"information loss"**. Privacy budget at 0 is said to be completely private though in reality it might not be possible as this will compromise on our performance and our model will lose all meaning. Attaining **ε=0** is very ideal and analogous to attaining an efficiency of 100% in an engine - we'd love to get there but it isn't realistic or practical. Our aim is to get our ε as close to 0 as possible. On the other hand, as **ε** → ∞, we are said to be "blatantly non-private" or completely non-private.
+<img src="https://cdn-images-1.medium.com/max/1000/0*h41f8kdsMrBwXiBH.gif" alt="Markdown Monster icon" style="margin: 10px;" />
+
+It is important to note that the equation is also symmetrical in nature (with respect to **x** and **x'**). ε is a privacy parameter or the privacy budget. A lower ε means higher privacy and vice-versa.
+For example, privacy budget at 0 is said to be completely private though in reality it might not be possible to attain complete privacy. Attaining **ε=0** is very ideal and analogous to attaining an efficiency of 100% in an engine - we'd love to get there but it isn't realistic or practical. Why is this impractical? For this, let us look at a DP-algorithm (there are quite a few of them, but let us look at the laplace mechanism)
+
+## The Laplace Mechanism and attaining ε-DP
+
+<img src="https://cdn-images-1.medium.com/max/750/0*bEV9Y0BB-yZDBGfz.png" alt="Markdown Monster icon" style="margin: 10px;" />
+
+I'm going to contradict my previous statement on how "random noise" addition doesn't help with attaining privacy. This is true, but not always. Random noise addition can be useful in some exceptional cases like sampling noises from the Laplacian Distribution as it is a differentially-private curve. That is, it satisfies the notion of differential privacy (the equations in the above section).
+As the name of this method suggests, we attain differential privacy by applying a laplacian noise on our dataset. This has the power to immediately transform our dataset into a differentially private one with a privacy budget ε, if the scale of our laplacian noise was **Δf/ε**, where **Δf** is the L1-sensitivity of our dataset. This however is only for a single count query. For a column vector query of d dimensions, the new **ε** becomes d times the old one by the <a href="http://proceedings.mlr.press/v37/kairouz15.pdf">**composition theorem**</a> .
+
+<br/>
+Hence to make this d **ε** -DP to **ε** -DP we need to multiply the scale by d which in turn increases the amount of noise. Thus, it is clearly visible that for large datasets, our laplacian scale gets really large thus having a higher impact on our dataset thereby affecting our performance with increasing d. One way to overcome this is to collect and use more data entries(n) during training so that the large noise added is compensated by the increased number of entries. But this is practically not feasible. Thus our focus now falls on reducing dimensions to a smaller value to make sure of the optimal trade-off between privacy and utility. Privacy and utility are negatively correlated in the sense that increase in one compromises on the other. Thus, there is an increasing motivation to look at dimensionality reduction techniques like PCA,VAE, ALI-GAN, etc., with the aim of minimizing information loss to optimise the privacy-utility trade-off.
+
+as this will compromise on our performance and our model will lose all meaning.  Our aim is to get our ε as close to 0 as possible. On the other hand, as **ε** → ∞, we are said to be "blatantly non-private" or completely non-private.
 
 <img src="https://cdn-images-1.medium.com/max/750/0*lsQ_2UbtuDyVLiGm" alt="Markdown Monster icon" style="margin: 10px;" />
 <br/>
 
 The results of count queries are noisy due to the DP-algorithm and the attacker is unable to infer useful data. In this way our model still doesn't lose significant performance but also doesn't leak user data.Differential privacy can be attained through many methods like the Exponential Mechanism or the Laplace Mechanism. Our focus however, will be limited to the Laplace mechanism.
 
-## The Laplace Mechanism and attaining ε-DP
 
-<img src="https://cdn-images-1.medium.com/max/750/0*bEV9Y0BB-yZDBGfz.png" alt="Markdown Monster icon" style="margin: 10px;" />
-
-I'm going to contradict my previous statement on how "random noise" addition doesn't help with attaining privacy. This is true, but not always. Random noise addition can be useful in some exceptional cases like sampling noises from the Laplacian Distribution as it is a differentially-private curve. As the name of this method suggests, we attain differential privacy by applying a laplacian noise on our dataset. This has the power to immediately transform our dataset into a differentially private one with a privacy budget ε, if the scale of our laplacian noise was **Δf/ε**, where **Δf** is the L1-sensitivity of our dataset. This however is only for a single count query. For a column vector query of d dimensions, the new **ε** becomes d times the old one by the **composition theorem**.
-
-<br/>
-Hence to make this d **ε** -DP to **ε** -DP we need to multiply the scale by d which in turn increases the amount of noise. Thus, it is clearly visible that for large datasets, our laplacian scale gets really large thus having a higher impact on our dataset thereby affecting our performance with increasing d. One way to overcome this is to collect and use more data entries(n) during training so that the large noise added is compensated by the increased number of entries. But this is practically not feasible. Thus our focus now falls on reducing dimensions to a smaller value to make sure of the optimal trade-off between privacy and utility. Privacy and utility are negatively correlated in the sense that increase in one compromises on the other. Thus, there is an increasing motivation to look at dimensionality reduction techniques like PCA,VAE, ALI-GAN, etc., with the aim of minimizing information loss to optimise the privacy-utility trade-off.
 

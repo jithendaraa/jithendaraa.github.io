@@ -13,9 +13,9 @@ author: Jithendaraa Subramanian
 
 navbar-links:
   About Me: "aboutme"
-  Blogs:
-    - IIT Palakkad: "https://jithendaraa.github.io/iitp-intern"
-    - IIT Madras: "https://jithendaraa.github.io/iitm-intern"
+  # Blogs:
+    # - IIT Palakkad: "https://jithendaraa.github.io/iitp-intern"
+    # - IIT Madras: "https://jithendaraa.github.io/iitm-intern"
 
 # --- Logo --- #
 

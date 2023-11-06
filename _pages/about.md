@@ -1,26 +1,26 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<b> Update: I am on the job market for research engineer and research scientist roles.</b>
+<br/>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am an M.Sc. student at <a href="https://www.mcgill.ca/">McGill University</a> and <a href="https://mila.quebec/en/">Mila</a> supervised by <a href="https://www.cim.mcgill.ca/~derek/">Derek Nowrouzezahrai</a> and <a href="https://saebrahimi.github.io/">Samira Ebrahimi Kahou</a>. My research interests span <b>probabilistic inference, causality, Large Language Models (LLMs), generative models, and drug discovery</b>. During my master's program, I worked on research problems at the intersection of causal discovery and representation learning, some of them involving <a href="https://proceedings.neurips.cc/paper/2021/hash/e614f646836aaed9f89ce58e837e2310-Abstract.html">GFlowNets</a>. My thesis centers on learning a joint distribution over causal variables, structures, and mechanisms from low-level data.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+In 2023, I spent my summer as a research scientist intern at <a href="https://www.amazon.science">Amazon Science</a> where I worked on training large-scale models for long-term revenue forecasting.
+
+Prior to my graduate studies at McGill, I completed my undergrad from <a href="https://www.nitt.edu">NIT Trichy</a>, India. During my junior year, I joined the <a href="https://www.cmu.edu/scs/robotutor/join-the-team/index.html">RoboTutor Team</a> at <a href="https://www.cmu.edu">Carnegie Mellon University</a> as a research intern supervised by <a href="https://www.ri.cmu.edu/ri-faculty/jack-mostow/">Jack Mostow</a>, where I used Reinforcement Learning to build a personalized Intelligent Tutoring System for underprivileged students in Tanzania. I also had the opportunity to explore machine learning in the context of security when I was a remote research intern at <a href="https://www.berkeley.edu">UC Berkeley</a> with <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/song.html">Dawn Song</a> and <a href="https://www.uvm.edu/~jnear/">Joseph Near</a>.

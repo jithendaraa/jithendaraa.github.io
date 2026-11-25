@@ -127,8 +127,7 @@ h2 { font-size: clamp(2.65rem, 4.25vw, 3.75rem); }
   min-height: 76px;
   border-bottom: 1.5px solid var(--line);
 }
-.wordmark, .footer-name { font: 650 clamp(1.6rem, 2.3vw, 2rem)/1.1 var(--script); }
-.wordmark { color: var(--ink); }
+.wordmark { font: 650 clamp(1.6rem, 2.3vw, 2rem)/1.1 var(--script); color: var(--ink); }
 .site-nav { display: flex; align-items: center; gap: 1.5rem; margin-left: auto; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 44px; position: relative; color: var(--ink); font-size: 1.17rem; }
 .site-nav a[aria-current] { color: var(--accent); font-weight: bold; }
@@ -310,6 +309,9 @@ pre, code { font-family: var(--print); }
 .footer-inner nav { display: flex; gap: .35rem 1.25rem; flex-wrap: wrap; }
 .footer-inner a { font-size: 1.1rem; color: var(--pencil); }
 .footer-credit { display: inline-flex; align-items: center; gap: .45rem; color: var(--pencil); font-size: 1rem; }
+@media (min-width: 621px) {
+  .footer-credit { margin-inline-start: auto; }
+}
 [data-theme="dark"] .footer-credit img { filter: brightness(0) invert(1); }
 
 @media (min-width: 931px) {

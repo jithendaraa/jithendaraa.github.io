@@ -1,25 +1,32 @@
-    {% if site.footer_fixed %}
-    <footer class="fixed-bottom">
-      <div class="container mt-0">
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
-        {%- if site.impressum_path -%}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-        {%- endif -%}
-        {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
-        {%- endif %}
-      </div>
-    </footer>
-    {%- else -%}
-    <footer class="sticky-bottom mt-5">
-      <div class="container">
-        &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}. {{ site.footer_text }}
-        {%- if site.impressum_path -%}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-        {%- endif -%}
-        {%- if site.last_updated -%}
-        Last updated: {{ "now" | date: '%B %d, %Y' }}.
-        {%- endif %}
-      </div>
-    </footer>
-    {%- endif %}
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div class="footer-name">{{ site.first_name }} {{ site.last_name }}</div>
+    {% unless page.url == '/' %}
+    <nav aria-label="Contact and profiles">
+      {% include contact-links.html %}
+    </nav>
+    {% endunless %}
+    <small class="footer-credit">
+      <img src="{{ '/assets/img/openai-blossom.png' | relative_url }}" width="18" height="18" alt="OpenAI">
+      Made with 6.2 Astra
+    </small>
+    <div class="footer-anecdote">
+      <strong>Fun fact:</strong> When I first tried to vibecode my website with a prompt asking 6.2 Astra Extra-High to be "unique", it made my website look like Claude's UI.
+      <details class="astra-note">
+        <summary><span class="draft-hover">(Hover to see the draft)</span><span class="draft-tap">(Tap to see the draft)</span></summary>
+        <div class="astra-story">
+          <div class="astra-prints">
+            <figure>
+              <a href="{{ '/assets/img/first-redesign-prompt.png' | relative_url }}"><img src="{{ '/assets/img/first-redesign-prompt.png' | relative_url }}" width="1272" height="488" loading="lazy" alt="My original prompt asking for a “very very cool, aesthetic and unique” website."></a>
+              <figcaption>The prompt</figcaption>
+            </figure>
+            <figure>
+              <a href="{{ '/assets/img/first-redesign.jpg' | relative_url }}"><img src="{{ '/assets/img/first-redesign.jpg' | relative_url }}" width="1600" height="1017" loading="lazy" alt="The first design, with an orange starburst beside my name, orange serif lettering and a probability plot."></a>
+              <figcaption>The first draft</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</footer>

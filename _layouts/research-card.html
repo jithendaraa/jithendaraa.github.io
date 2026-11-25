@@ -1,0 +1,7 @@
+---
+---
+<a class="research-card" href="{{ '/publications/' | relative_url }}#{{ entry.key }}">
+  {% if entry.preview %}<div class="paper-art"><img src="{{ entry.preview | prepend: '/assets/img/research/' | relative_url }}" alt="" width="1200" height="533"></div>{% endif %}
+  <div class="paper-meta"><span>{{ entry.abbr | default: entry.journal | strip_html }}</span><span>{{ entry.year }}</span></div>
+  <h3>{{ entry.title }}</h3>
+</a>

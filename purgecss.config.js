@@ -4,7 +4,8 @@ module.exports = {
         "_site/**/*.js"
     ],
     css: [
-        "_site/assets/css/*.css"
+        "_site/assets/css/*.css",
+        "!_site/assets/css/portfolio.css" // Includes theme states set in the browser.
     ],
     output: "_site/assets/css/",
     skippedContentGlobs: [

@@ -1,0 +1,28 @@
+<svg class="icon icon-{{ include.name }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+  {%- case include.name -%}
+  {%- when 'pocket-notebook' -%}
+    <g transform="rotate(-7 12 12)">
+      <rect x="5" y="3" width="15" height="18" rx="2.5" fill="var(--wash)"/>
+      <path d="M3 7h4m-4 5h4m-4 5h4"/>
+      <g fill="currentColor" stroke="none"><circle cx="10.5" cy="10" r="1"/><circle cx="16" cy="10" r="1"/></g>
+      <path d="M11 14q2.2 3 4.5-.2"/>
+    </g>
+  {%- when 'paper-stack' -%}
+    <g transform="rotate(5 12 12)">
+      <path d="m6 6-2 .3.6 15 13-.5" fill="var(--paper)"/>
+      <path d="m7 3 9-.3 4.2 4.2-.4 11.6-13 .3Z" fill="var(--wash)"/>
+      <path d="m16 3-.1 4.3 4-.3M10 10.5l6-.2m-6 3.7 4.4-.2"/>
+    </g>
+  {%- when 'newspaper' -%}
+    <g transform="rotate(-5 12 12)">
+      <path d="M17.8 8 21 7.7l-.2 10q0 2-2 2h-2" fill="var(--paper)"/>
+      <path d="m4 4.7 14-.4-.2 13.5q0 1.5 1 1.9H5.5q-2 0-2-2Z" fill="var(--wash)"/>
+      <path d="m7 8.3 8-.2m-8 3.4 3-.1v3.9l-3 .1Zm6 .1 2-.1m-2 3 2-.1"/>
+    </g>
+  {%- when 'file' -%}<path d="M5.5 3h8l5 5v13h-13z"/><path d="M13.5 3v5h5M9 12h6M9 16h5"/>
+  {%- when 'moon' -%}<path d="M20.3 14a8.6 8.6 0 0 1-10.2-10.3A8.8 8.8 0 1 0 20.3 14Z"/>
+  {%- when 'sun' -%}<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+  {%- when 'mail' -%}<rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/>
+  {%- when 'book' -%}<path d="M12 6.2c-2.8-2.1-6.1-2.4-9-1.7v14c3-.7 6.2-.4 9 1.7 2.8-2.1 6-2.4 9-1.7v-14c-3-.7-6.2-.4-9 1.7Zm0 0v14"/>
+  {%- endcase -%}
+</svg>

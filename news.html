@@ -1,7 +1,15 @@
 ---
-layout: page
-title: news
+layout: none
 permalink: /news/
+sitemap: false
 ---
-
-{% include news.html %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+    <title>News · {{ site.first_name }} {{ site.last_name }}</title>
+    <meta http-equiv="refresh" content="0;url={{ '/' | relative_url }}#news">
+  </head>
+  <body><a href="{{ '/' | relative_url }}#news">Read the news on my homepage</a></body>
+</html>

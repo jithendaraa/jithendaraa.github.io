@@ -1,74 +1,67 @@
 ---
 layout: default
 ---
-
-<!-- about.html -->
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
-
-        <article>
-          {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if page.profile.image %}
-              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
-
-              {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
-
-              {% include figure.html
-              path=profile_image_path
-              class=profile_image_class
-              alt=page.profile.image
-              cache_bust=true -%}
-            {% endif -%}
-            {%- if page.profile.more_info %}
-            <div class="more-info">
-              {{ page.profile.more_info }}
+<div class="shell">
+  <section class="hero" aria-labelledby="intro-title">
+    <div class="collage">
+      <div class="graph-sheet" aria-hidden="true"></div>
+      <img class="lakeside-print" src="{{ '/assets/img/portrait.webp' | relative_url }}" width="615" height="820" alt="">
+      <figure class="photo-print">
+        <img src="{{ '/assets/img/headshot-1768.jpg' | relative_url }}" width="528" height="600" alt="Jithendaraa smiling in front of a blue projection" fetchpriority="high">
+        <figcaption>{{ site.first_name }} {{ site.last_name }}</figcaption>
+      </figure>
+    </div>
+    <div class="hero-copy">
+      <h1 id="intro-title"><span>Hi, I’m </span><strong>{{ site.first_name }}.</strong></h1>
+      <nav class="profile-links" aria-label="Contact and profiles">
+        {% include contact-links.html %}
+      </nav>
+      <div class="intro">
+        <p>At <a href="https://www.tri.global">Toyota Research Institute</a>, I pretrain multimodal foundation models for materials science and post-train LLMs to accelerate materials discovery.</p>
+        <p>I’ve trained models to identify crystalline phases from X-ray diffraction patterns and perform Rietveld refinement.</p>
+        <p>My research interests span <strong>AI for science, AI safety, and RL for LLM post-training</strong>. I am passionate about building robust training infra and writing high performance code.</p>
+      </div>
+      <p class="hiring-note"><strong>Update: Looking for full-time research engineer and research scientist roles in 2026!</strong></p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#papers">{% include icon.html name="book" %} <span class="link-label">Read my work</span></a>
+        <a class="text-button" href="{{ site.cv_url | relative_url }}"><span class="link-label">CV</span></a>
+        <a class="text-button" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"><span class="link-label">LinkedIn</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="background-section ruled" id="about" aria-labelledby="background-heading">
+    <div class="prose">
+      <h2 id="background-heading">Research background</h2>
+      {{ content }}
+    </div>
+    <figure class="video-gallery" aria-label="Projection videos">
+      <div class="video-window" id="projection-videos">
+        <div class="video-strip">
+          {% for clip in site.data.projection_clips %}
+            {% assign video_url = clip.file | append: '.mp4' | prepend: '/assets/video/' | relative_url %}
+            <div class="video-frame">
+              <video class="background-video" src="{{ video_url }}" autoplay muted loop playsinline disablepictureinpicture
+                     width="650" height="520" poster="{{ clip.file | append: '-poster.jpg' | prepend: '/assets/img/' | relative_url }}"
+                     aria-label="{{ clip.description | escape }}">
+                <a href="{{ video_url }}">{{ clip.description }}</a>
+              </video>
             </div>
-            {%- endif %}
-          </div>
-          {%- endif %}
-
-          <div class="clearfix">
-            {{ content }}
-          </div>
-          
-          <br/>
-          <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit; max-height: 200px; overflow: auto;">News</a></h2>
-            {%- include news.html limit=true %}
-          {%- endif %}
-          <br/>
-          <br/>
-          
-          <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected publications</a></h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
-
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-
-            </div>
-          {%- endif %}
-        </article>
-
+          {% endfor %}
+        </div>
+      </div>
+    </figure>
+  </section>
+  <section class="updates-section ruled" id="news" aria-labelledby="updates-heading">
+    <div class="section-heading"><h2 id="updates-heading">News</h2></div>
+    <div class="news-scroll" role="region" tabindex="0" aria-labelledby="updates-heading">
+      {% include news.html %}
+    </div>
+  </section>
+  <section class="research-section ruled" id="papers" aria-labelledby="research-heading">
+    <div class="section-heading">
+      <h2 id="research-heading">Publications</h2>
+      <a class="index-link" href="https://scholar.google.ca/citations?user={{ site.scholar_userid }}">Google Scholar</a>
+    </div>
+    <div class="publication-list">{% bibliography %}</div>
+  </section>
 </div>

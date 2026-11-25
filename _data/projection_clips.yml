@@ -1,0 +1,8 @@
+- file: projected-portraits
+  description: Changing portraits with facial landmarks
+- file: chromatic-patterns
+  description: Color grids and abstract patterns
+- file: grid-and-stones
+  description: Numbered stones on a game board
+- file: monochrome-figures
+  description: Monochrome figures projected onto an arch

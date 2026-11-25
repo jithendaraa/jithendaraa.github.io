@@ -11,6 +11,12 @@
 
 <style>
   .post-links { display:flex; justify-content:space-between; gap:1rem; margin:0 auto .6rem; width:92%; font: .95rem/1.5 system-ui,sans-serif; }
+  /* Give the code and the matrix workspace a wider layout at normal browser zoom. */
+  @media (min-width: 680px) {
+    #codex-visualization { zoom: .85; }
+    body { padding-top: .45rem; }
+    .post-links { margin-bottom: .15rem; }
+  }
   .post-links a { color:#285f4d; text-underline-offset:.2em; }
 </style>
 </head>
@@ -2720,6 +2726,12 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   #naive-matmul h1 { font-size:clamp(32px,8.2vw,40px) }
   #naive-matmul .mm-bound-head span { font-size:11px }
   #naive-matmul .mm-workhead { flex-wrap:wrap }
+}
+@media (min-width: 791px) {
+  #naive-matmul { padding-top: 8px; }
+  #naive-matmul .mm-tabs { margin-bottom: 10px; }
+  #naive-matmul header { padding-bottom: 12px; }
+  #naive-matmul .mm-columns { padding-top: 12px; }
 }
 @media(prefers-reduced-motion:reduce) { #naive-matmul .mm-cell-mark { transition:none } }
 &lt;/style&gt;

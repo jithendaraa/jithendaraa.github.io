@@ -157,7 +157,7 @@ h2 { font-size: clamp(2.65rem, 4.25vw, 3.75rem); }
   background-size: 13px 13px;
   box-shadow: 0 2px 4px #25392a24;
 }
-.lakeside-print {
+.back-print {
   position: absolute; left: 19%; top: 10%; width: 66%; height: 76%; object-fit: cover;
   border: 7px solid #faf7eb; transform: rotate(-5deg); box-shadow: 1px 3px 5px #25252b44;
 }
@@ -310,43 +310,7 @@ pre, code { font-family: var(--print); }
 .footer-inner nav { display: flex; gap: .35rem 1.25rem; flex-wrap: wrap; }
 .footer-inner a { font-size: 1.1rem; color: var(--pencil); }
 .footer-credit { display: inline-flex; align-items: center; gap: .45rem; color: var(--pencil); font-size: 1rem; }
-.footer-anecdote { position: relative; width: 100%; color: var(--pencil); font-size: 1.08rem; }
-.astra-note { display: inline-block; vertical-align: baseline; anchor-name: --draft-trigger; }
-.astra-note summary {
-  cursor: pointer; list-style: none; color: var(--accent);
-  font: 600 1.25rem/1.35 var(--script); padding-inline: .25em;
-  background: linear-gradient(-1deg, transparent 12%, var(--wash) 13% 78%, transparent 79%);
-  text-decoration: underline dashed 1px; text-underline-offset: .13em;
-}
-.astra-note summary::-webkit-details-marker { display: none; }
-.astra-note[open] summary { text-decoration-style: solid; }
-.draft-hover { display: none; }
-@media (hover: hover) {
-  .draft-hover { display: inline; }
-  .draft-tap { display: none; }
-}
-@media (pointer: coarse) {
-  .astra-note summary { display: inline-flex; min-height: 44px; align-items: center; }
-}
 [data-theme="dark"] .footer-credit img { filter: brightness(0) invert(1); }
-.astra-story {
-  position: absolute; z-index: 3; left: 0; bottom: 100%;
-  position-anchor: --draft-trigger;
-  left: clamp(0px, anchor(left), max(0px, 100% - 34rem)); bottom: anchor(top);
-  width: min(34rem, 100%); max-height: 80vh; max-height: 80dvh; overflow: auto;
-  padding: clamp(.9rem, 2vw, 1.3rem); border: 1px solid var(--line); border-radius: 3px 8px 5px 4px;
-  background: var(--paper); color: var(--ink); box-shadow: 2px 5px 18px #13172230;
-  font-size: 1.12rem; line-height: 1.35;
-}
-.astra-prints { display: grid; gap: .7rem; padding: .35rem .4rem; }
-.astra-prints figure {
-  width: 76%; padding: .3rem .3rem .12rem; background: #faf6ea; color: #354252;
-  box-shadow: 0 1px 4px #19212955; transform: rotate(-1.6deg);
-}
-.astra-prints figure:last-child { justify-self: end; width: 86%; transform: rotate(1.3deg); }
-.astra-prints a, .astra-prints img { display: block; }
-.astra-prints img { width: 100%; height: auto; }
-.astra-prints figcaption { text-align: center; font: 600 1.12rem/1.3 var(--script); }
 
 @media (min-width: 931px) {
   .video-gallery { margin-top: 0; }
@@ -398,7 +362,6 @@ pre, code { font-family: var(--print); }
   .publication-details { grid-column: 1 / -1; }
   .publication-list > ol { border-top: 0; padding-top: .65rem; }
   .footer-inner { align-items: start; flex-direction: column; }
-  .astra-prints figure, .astra-prints figure:last-child { width: 96%; }
 }
 @media (max-width: 480px) {
   .site-nav { flex-wrap: wrap; gap: 0 clamp(.4rem, calc(15vw - 2.6rem), 1.5rem); }

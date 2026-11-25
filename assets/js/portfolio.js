@@ -15,43 +15,6 @@
 })();
 
 (function () {
-  const note = document.querySelector(".astra-note");
-  if (!note) return;
-  const credit = note.querySelector("summary");
-  let preview = false;
-
-  function closeNote() {
-    preview = false;
-    note.open = false;
-  }
-
-  note.addEventListener("pointerenter", event => {
-    if (event.pointerType !== "mouse" || note.open) return;
-    preview = true;
-    note.open = true;
-  });
-  note.addEventListener("pointerleave", () => {
-    if (preview && !note.contains(document.activeElement)) closeNote();
-  });
-  credit.addEventListener("click", event => {
-    if (!preview) return;
-    event.preventDefault();
-    preview = false;
-  });
-  document.addEventListener("pointerdown", event => {
-    if (note.open && !note.contains(event.target)) closeNote();
-  });
-  note.addEventListener("focusout", event => {
-    if (!note.contains(event.relatedTarget)) closeNote();
-  });
-  document.addEventListener("keydown", event => {
-    if (event.key !== "Escape" || !note.open) return;
-    if (note.contains(document.activeElement)) credit.focus();
-    closeNote();
-  });
-})();
-
-(function () {
   const gallery = document.querySelector(".video-gallery");
   if (!gallery) return;
 

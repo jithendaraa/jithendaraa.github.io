@@ -13,6 +13,9 @@
       <a href="{{ '/' | relative_url }}#news" {% if page.collection == 'news' %}aria-current="location"{% endif %}>
         {% include icon.html name="newspaper" %}<span class="link-label">News</span>
       </a>
+      <a href="{{ '/blog/' | relative_url }}" {% if page.url == '/blog/' %}aria-current="page"{% endif %}>
+        {% include icon.html name="book" %}<span class="link-label">Blog</span>
+      </a>
     </nav>
     <div class="header-tools">
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme" hidden>

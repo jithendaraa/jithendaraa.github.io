@@ -1,0 +1,4 @@
+- title: How CUDA Threads Multiply Matrices
+  date: "2026-11-25"
+  url: /blog/cuda-matmul/
+  description: Step through six matrix multiplication kernels. Follow individual threads to see how coalescing, shared memory, and register tiling change the work of computing one output tile.

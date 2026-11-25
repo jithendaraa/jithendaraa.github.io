@@ -1,0 +1,17 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+{% assign entries = site.data.blog | sort: 'date' | reverse %}
+<ul class="news-list">
+  {% for entry in entries %}
+  <li>
+    <time datetime="{{ entry.date }}">{{ entry.date | date: '%B %-d, %Y' }}</time>
+    <div>
+      <h2><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h2>
+      <p>{{ entry.description | escape }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
